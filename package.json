@@ -1,0 +1,27 @@
+{
+  "name": "gardorbot",
+  "version": "0.0.0",
+  "description": "A simple telegram bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devgar/node-telegram-bot.git"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "node"
+  ],
+  "author": "Edgar Albalate <dev.gardo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devgar/node-telegram-bot/issues"
+  },
+  "homepage": "https://github.com/devgar/node-telegram-bot#readme",
+  "dependencies": {
+    "telebot": "^1.2.3"
+  }
+}
