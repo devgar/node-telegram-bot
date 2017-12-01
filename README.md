@@ -4,5 +4,15 @@ A simple nodejs telegram bot
 ## Initialize
 
 ```
-npm start
+npm test -- {{YOU_TOKEN_KEY}}
 ````
+
+## Commands
+
+```
+/start {{YOUR TITLE}}
+```
+
+```
+/add {{URL}} ... {URL}
+```
