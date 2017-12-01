@@ -23,8 +23,9 @@ const bot = new TeleBot({
 bot.on(['/start', '/hello'], (msg) => {
   if(msg.chat.type != 'supergroup')
     return msg.reply.text("Sorry, I only work with supergroups")
-  msg.reply.text('Hola! He llegado para gestionar los mensajes anclados')
-  msg.reply.text(msg.text.slice(7) || 'Untitled').then( d => {
+  console.log(msg)
+  msg.reply.text(msg.text.slice(msg.entities[0].length) || '<Untitled>')
+  .then( d => {
     bot.pinChatMessage(d.result.chat.id, d.result.message_id)
   })
 })
