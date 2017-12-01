@@ -1,16 +1,20 @@
 const TeleBot = require('telebot')
-const fs = require('fs')
 
-let token
-try{
-  token = fs.readFileSync("token.txt", 'utf8')
-  token = token.replace('\n', '')
-} catch(e) {
-  if(e.code == 'ENOENT')
-    console.log("  Error: token.txt not found")
-  else console.log(e)
-  process.exit(1)
+let token = process.argv.length > 2 ? process.argv[2] : undefined 
+
+if(!token) {
+  try{
+    const fs = require('fs')
+    token = fs.readFileSync("token.txt", 'utf8')
+    token = token.replace('\n', '')
+  } catch(e) {
+    if(e.code == 'ENOENT')
+      console.log("  Error: token.txt not found")
+    else console.log(e)
+    process.exit(1)
+  }
 }
+
 const bot = new TeleBot({
   token: token,
   polling: {limit: 50}
