@@ -1,6 +1,6 @@
 const TeleBot = require('telebot')
 
-let token = process.argv.length > 2 ? process.argv[2] : undefined 
+let token = process.argv.length > 2 ? process.argv[2] : process.env.TOKEN 
 
 if(!token) {
   try{
