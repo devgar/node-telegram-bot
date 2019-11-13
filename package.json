@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/devgar/node-telegram-bot#readme",
   "dependencies": {
-    "telebot": "^1.2.3"
+    "telebot": "^1.2.6"
   }
 }
